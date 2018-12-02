@@ -36,7 +36,7 @@ public class FileTransferDAO {
     private Connection createDatasource(String dbms, String datasource) throws
             ClassNotFoundException, SQLException, FileTransferException {
         Connection connection = connectToFileDB(dbms, datasource);
-        /*
+        
         if (!userTableExists(connection)) {
             Statement statement = connection.createStatement();
             statement.executeUpdate("CREATE TABLE " + TABLE_NAME1
@@ -52,7 +52,7 @@ public class FileTransferDAO {
                     + READ_COLUMN_NAME + " BIT,"
                     + WRITE_COLUMN_NAME + " BIT)");
         }
-        */
+        
         return connection;
     }
     private boolean userTableExists(Connection connection) throws SQLException {
